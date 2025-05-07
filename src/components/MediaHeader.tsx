@@ -41,12 +41,12 @@ const MediaHeader = () => {
       <Stack direction={{ xs: 'column', sm: 'row' }} alignItems="center" spacing={{ xs: 1, md: 2 }}>
         <Stack direction="row" alignItems="center" spacing={1}>
           <PhoneIcon fontSize="small" />
-          <Typography variant="body2">+91 636 033 0726</Typography>
+          <Typography variant="body2">+91 636 XXX XXX6</Typography>
         </Stack>
         <Divider />
         <Stack direction="row" alignItems="center" spacing={1}>
           <EmailIcon fontSize="small" />
-          <Typography variant="body2">info@prajoshtechnologies.com</Typography>
+          <Typography variant="body2">info@nsltech.com</Typography>
         </Stack>
       </Stack>
     </Box>
