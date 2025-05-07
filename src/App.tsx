@@ -1,10 +1,10 @@
+import MediaHeader from "./components/MediaHeader"
+
 const App = () => {
 
   return (
     <>
-      <h1>
-        NSL Tech
-      </h1>
+     <MediaHeader />
     </>
   )
 }
