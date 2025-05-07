@@ -7,7 +7,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 
 const Divider = () => (
-  <Box sx={{ width: '1px', height: '24px', backgroundColor: 'rgba(255, 255, 255, 0.5)', opacity: 0.8, display: { xs: 'none', sm: 'block' } }} />
+  <Box sx={{ width: '1px', height: '24px', backgroundColor: 'rgba(255, 255, 255, 0.5)', opacity: 0.8 }} />
 );
 
 const MediaHeader = () => {
@@ -15,7 +15,7 @@ const MediaHeader = () => {
     <Box
       sx={{
         display: 'flex',
-        flexDirection: { xs: 'column', sm: 'row', md: 'row' },
+        flexDirection: { xs: 'column', sm: 'row' },
         justifyContent: 'flex-start',
         alignItems: 'center',
         px: { xs: 0, sm: 5, md: 10 },
@@ -38,18 +38,17 @@ const MediaHeader = () => {
 
       <Box sx={{ flexGrow: 1 }} />
 
-      <Stack direction={{ xs: 'column', sm: 'row' }} alignItems="center" spacing={{ xs: 1, md: 2 }}>
+      <Stack direction={'row'} flexWrap={'wrap'} alignItems="center" justifyContent={'center'} spacing={{ xs: 1, md: 2 }}>
         <Stack direction="row" alignItems="center" spacing={1}>
           <PhoneIcon fontSize="small" />
           <Typography variant="body2">+91 636 XXX XXX6</Typography>
         </Stack>
-        <Divider />
         <Stack direction="row" alignItems="center" spacing={1}>
           <EmailIcon fontSize="small" />
           <Typography variant="body2">info@nsltech.com</Typography>
         </Stack>
       </Stack>
-    </Box>
+    </Box >
   );
 };
 
