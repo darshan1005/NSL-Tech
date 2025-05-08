@@ -1,4 +1,5 @@
 import About from "./components/About"
+import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import MediaHeader from "./components/MediaHeader"
 import NavBar from "./components/NavBar"
@@ -15,6 +16,7 @@ const App = () => {
       <About />
       <ServicesCarousel />
       <ScrollToTop />
+      <Footer />
     </>
   )
 }

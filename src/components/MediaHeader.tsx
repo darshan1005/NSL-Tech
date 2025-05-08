@@ -18,7 +18,7 @@ const MediaHeader = () => {
         flexDirection: { xs: 'column', sm: 'row' },
         justifyContent: 'flex-start',
         alignItems: 'center',
-        px: { xs: 0, sm: 5, md: 10 },
+        px: { xs: 0, sm: 3 },
         py: 1,
         background: 'linear-gradient(to right, #00cfff, #0072bc)',
         color: 'white',

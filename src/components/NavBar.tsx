@@ -44,7 +44,7 @@ const NavBar = () => {
         <Toolbar>
           {/* Logo */}
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
-            <img src={PTech} alt="PraJosh Logo" style={{ height: 40, marginRight: 8 }} />
+            <img src={PTech} alt="demo Logo" style={{ height: 40 }} />
           </Box>
 
           {/* Desktop Menu */}

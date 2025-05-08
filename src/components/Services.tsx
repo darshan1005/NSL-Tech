@@ -8,6 +8,7 @@ import {
   CardContent,
   useMediaQuery,
 } from '@mui/material';
+import map from '../assets/world-app.jpg';
 
 const services = [
   {
@@ -53,7 +54,7 @@ const ServicesCarousel = () => {
     stopAutoScroll();
     intervalRef.current = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
-    }, 3000); // Change card every 3 seconds
+    }, 5000); // Change card every 3 seconds
   };
 
   const stopAutoScroll = () => {
@@ -69,73 +70,157 @@ const ServicesCarousel = () => {
   );
 
   return (
-    <Box sx={{ textAlign: 'center', py: 4, px: { xs: 2, sm: 4 } }}>
-      <Typography variant="h4" fontWeight="bold" gutterBottom>
-        Our Services
-      </Typography>
+    <>
+      <Box sx={{ textAlign: 'center', py: 4, px: { xs: 2, sm: 4 } }}>
+        <Typography variant="h4" fontWeight="bold" gutterBottom>
+          Our Services
+        </Typography>
 
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: 2,
-          overflow: 'hidden',
-          mt: 4,
-        }}
-        onMouseEnter={stopAutoScroll}
-        onMouseLeave={startAutoScroll}
-      >
-        {visibleCards.map((service, index) => (
-          <Card
-            key={index}
-            sx={{
-              width: 300,
-              transition: 'transform 0.5s ease',
-              borderRadius: 2,
-            }}
-          >
-            <CardMedia
-              component="img"
-              image={service.image}
-              alt={service.title}
-              sx={{ height: 180, objectFit: 'cover' }}
-            />
-            <CardContent
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: 2,
+            overflow: 'hidden',
+            mt: 4,
+          }}
+          onMouseEnter={stopAutoScroll}
+          onMouseLeave={startAutoScroll}
+        >
+          {visibleCards.map((service, index) => (
+            <Card
+              key={index}
               sx={{
-                background: theme.palette.primary.main,
-                color: '#fff',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
+                width: 300,
+                transition: 'transform 0.5s ease',
+                borderRadius: 2,
               }}
             >
-              <Typography fontWeight="bold" fontSize="1.1rem">
-                {service.title}
-              </Typography>
-            </CardContent>
-          </Card>
-        ))}
-      </Box>
+              <CardMedia
+                component="img"
+                image={service.image}
+                alt={service.title}
+                sx={{ height: 180, objectFit: 'cover' }}
+              />
+              <CardContent
+                sx={{
+                  background: theme.palette.primary.main,
+                  color: '#fff',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <Typography fontWeight="bold" fontSize="1.1rem">
+                  {service.title}
+                </Typography>
+              </CardContent>
+            </Card>
+          ))}
+        </Box>
 
-      {/* Pagination dots */}
-      <Box sx={{ mt: 3, display: 'flex', justifyContent: 'center', gap: 1 }}>
-        {services.map((_, i) => (
-          <Box
-            key={i}
-            onClick={() => setActiveIndex(i)}
-            sx={{
-              width: 10,
-              height: 10,
-              borderRadius: '50%',
-              backgroundColor: i === activeIndex ? theme.palette.primary.main : '#ccc',
-              cursor: 'pointer',
-              transition: 'background 0.3s ease',
-            }}
-          />
-        ))}
+        {/* Pagination dots */}
+        <Box sx={{ mt: 3, display: 'flex', justifyContent: 'center', gap: 1 }}>
+          {services.map((_, i) => (
+            <Box
+              key={i}
+              onClick={() => setActiveIndex(i)}
+              sx={{
+                width: 10,
+                height: 10,
+                borderRadius: '50%',
+                backgroundColor: i === activeIndex ? theme.palette.primary.main : '#ccc',
+                cursor: 'pointer',
+                transition: 'background 0.3s ease',
+              }}
+            />
+          ))}
+        </Box>
       </Box>
-    </Box>
+      <Box>
+        <Typography variant="h4" fontWeight="bold" gutterBottom textAlign={'center'} mt={4}>
+          Our trusted partners
+        </Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            gap: 2,
+            py: 3,
+            px: 2,
+            backgroundImage: `url(${map})`,
+            backgroundSize: 'fit',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            borderRadius: 2,
+            mb: 4,
+          }}
+        >
+          {['Microsoft', 'Google', 'Amazon', 'Facebook', 'Apple', 'IBM', 'Oracle'].map((company, index) => (
+            <Box
+              key={index}
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                px: 3,
+                py: 1.5,
+                backgroundColor: theme.palette.primary.main,
+                color: theme.palette.primary.contrastText,
+                fontWeight: 'bold',
+                transition: 'transform 0.3s ease',
+                '&:hover': {
+                  transform: 'scale(1.1)',
+                },
+              }}
+            >
+              {company}
+            </Box>
+          ))}
+
+          {/* Client Reviews */}
+          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 3, flexWrap: 'wrap' }}>
+            {[
+              {
+                review: 'The team provided exceptional service and helped us achieve our goals seamlessly.',
+                name: 'John Doe',
+                location: 'New York, USA',
+              },
+              {
+                review: 'Their expertise and professionalism exceeded our expectations. Highly recommended!',
+                name: 'Jane Smith',
+                location: 'London, UK',
+              },
+            ].map((client, index) => (
+              <Card
+                key={index}
+                sx={{
+                  maxWidth: 400,
+                  p: 2,
+                  boxShadow: 3,
+                  borderRadius: 2,
+                  backgroundColor: theme.palette.background.paper,
+                }}
+              >
+                <CardContent>
+                  <Typography variant="body1" color="textSecondary" mb={2}>
+                    "{client.review}"
+                  </Typography>
+                  <Typography variant="h6" fontWeight="bold">
+                    {client.name}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    {client.location}
+                  </Typography>
+                </CardContent>
+              </Card>
+            ))}
+          </Box>
+        </Box>
+      </Box>
+    </>
   );
 };
 
