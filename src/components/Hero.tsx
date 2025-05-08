@@ -10,20 +10,20 @@ const Hero = () => {
   const slides = [
     {
       title: "Slide 1 Title",
-      description: "This is the description for slide 1.",
-      shortDescription: "This is a short description for slide 1.",
+      description: "This is the description for slide 1 which is little long.",
+      shortDescription: "This is a short description .",
       image: "https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg",
     },
     {
       title: "Slide 2 Title",
       description: "This is the description for slide 2.",
-      shortDescription: "This is a short description for slide 2.",
+      shortDescription: "This is a short description .",
       image: "https://i.redd.it/tc0aqpv92pn21.jpg",
     },
     {
       title: "Slide 3 Title",
       description: "This is the description for slide 3.",
-      shortDescription: "This is a short description for slide 3.",
+      shortDescription: "This is a short description .",
       image: "https://wharferj.files.wordpress.com/2015/11/bio_north.jpg",
     },
   ];
@@ -61,11 +61,10 @@ const Hero = () => {
           left: { xs: "50%", md: "33%" },
           transform: 'translate(-50%, -50%)',
           color: 'white',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: { xs: 'none', sm: 'rgba(0, 0, 0, 0.5)' },
           padding: { xs: '10px', sm: '15px', md: '20px' },
           borderRadius: '10px',
           width: { xs: '75%', sm: '70%', md: 'max-content' },
-          textAlign: { xs: 'center', md: 'left' },
         }}
       >
         <Typography

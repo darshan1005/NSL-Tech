@@ -1,4 +1,5 @@
-import { Box, Button, TextField, Typography, Modal } from '@mui/material';
+import { Box, Button, TextField, Typography, Modal, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/system';
 
 interface FormProps {
   open?: boolean;
@@ -6,9 +7,11 @@ interface FormProps {
 }
 
 const Form = ({ open = false, handleClose }: FormProps) => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <>
+    <Box p={3}>
       {/* Popup Modal */}
       <Modal open={open} onClose={handleClose}>
         <Box
@@ -17,10 +20,10 @@ const Form = ({ open = false, handleClose }: FormProps) => {
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            width: 400,
+            width: isSmallScreen ? '90%' : 400,
             bgcolor: 'background.paper',
             boxShadow: 24,
-            p: 4,
+            p: isSmallScreen ? 2 : 4,
             borderRadius: 2,
           }}
         >
@@ -64,7 +67,7 @@ const Form = ({ open = false, handleClose }: FormProps) => {
           </Button>
         </Box>
       </Modal>
-    </>
+    </Box>
   );
 };
 
