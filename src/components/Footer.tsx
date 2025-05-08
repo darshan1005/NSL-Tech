@@ -75,10 +75,10 @@ const Footer = () => {
           Get in Touch
         </Typography>
         <Typography variant="body2" mb={1}>
-          Address: 123 Tech Street, Silicon Valley, CA, USA
+          Address: 123 Tech Street, Silicon Valley, CA, India
         </Typography>
         <Typography variant="body2" mb={1}>
-          Mobile: +1 (123) 456-7890
+          Mobile: +91 636 XXX XXX6
         </Typography>
         <Typography variant="body2">
           Email: <Link href="mailto:info@nsl-tech.com" color="inherit" underline="hover">info@nsl-tech.com</Link>

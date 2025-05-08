@@ -82,7 +82,7 @@ const NavBar = () => {
                 <Box>
                   <Typography variant="body2" fontWeight="bold" >Have any question ?</Typography>
                   <Typography variant="body2" fontWeight="bold" sx={{ color: 'grey' }}>
-                    +91 636 033 0726
+                    +91 636 XXX XXX6
                   </Typography>
                 </Box>
               </Box>
