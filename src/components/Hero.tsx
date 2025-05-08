@@ -50,7 +50,7 @@ const Hero = () => {
         alt={slides[currentIndex].title}
         sx={{
           width: '100%',
-          height: { xs: 490, md: 590 },
+          height: { xs: 460, md: 590 },
           objectFit: 'cover',
         }}
       />
@@ -73,7 +73,7 @@ const Hero = () => {
           mb={1}
           data-aos="fade-up"
           key={`shortDescription-${currentIndex}`}
-          fontSize={{ xs: '1rem', sm: '1.25rem', md: '1.5rem' }}
+          fontSize={{ xs: '1.2rem', md: '1.5rem' }}
         >
           {slides[currentIndex].shortDescription}
         </Typography>
@@ -83,17 +83,17 @@ const Hero = () => {
           data-aos="fade-up"
           data-aos-delay="400"
           key={`title-${currentIndex}`}
-          fontSize={{ xs: '1.5rem', sm: '2rem', md: '2.5rem' }}
+          fontSize={{ xs: '1.875rem', md: '2.5rem' }}
         >
           {slides[currentIndex].title}
         </Typography>
         <Typography
           variant="body1"
-          mb={3}
+          mb={1}
           data-aos="fade-up"
           data-aos-delay="400"
           key={`description-${currentIndex}`}
-          fontSize={{ xs: '0.875rem', sm: '1rem', md: '1.125rem' }}
+          fontSize={{ xs: '0.875rem', md: '1.125rem' }}
         >
           {slides[currentIndex].description}
         </Typography>
@@ -104,8 +104,8 @@ const Hero = () => {
           data-aos-delay="600"
           key={`button-${currentIndex}`}
           sx={{
-            fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' },
-            padding: { xs: '5px 10px', sm: '8px 15px', md: '10px 20px' },
+            fontSize: { xs: '0.875rem', md: '1rem' },
+            padding: { xs: '8px 15px', md: '10px 20px' },
           }}
         >
           Learn More

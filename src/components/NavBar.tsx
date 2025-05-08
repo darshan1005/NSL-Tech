@@ -40,7 +40,7 @@ const NavBar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <AppBar position="static" color="default" elevation={1}>
+      <AppBar position="sticky" color="default" elevation={1}>
         <Toolbar>
           {/* Logo */}
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
