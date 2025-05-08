@@ -154,7 +154,6 @@ const ServicesCarousel = () => {
             backgroundSize: 'fit',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
-            borderRadius: 2,
             mb: 4,
           }}
         >
