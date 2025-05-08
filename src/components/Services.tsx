@@ -48,13 +48,14 @@ const ServicesCarousel = () => {
   useEffect(() => {
     startAutoScroll();
     return () => stopAutoScroll();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const startAutoScroll = () => {
     stopAutoScroll();
     intervalRef.current = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
-    }, 5000); // Change card every 3 seconds
+    }, 5000);
   };
 
   const stopAutoScroll = () => {
