@@ -1,7 +1,6 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import demo2 from '../assets/demo-2.png';
 import demo3 from '../assets/demo-3.png';
-import Banner from "./Banner";
 
 const About = () => {
   return (
@@ -63,7 +62,6 @@ const About = () => {
           </Stack>
         </Box>
       </Box>
-      <Banner />
     </>
   );
 };

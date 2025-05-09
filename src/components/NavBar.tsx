@@ -23,6 +23,7 @@ import {
 } from '@mui/icons-material';
 import { useTheme } from '@mui/material/styles';
 import PTech from '../assets/demo-logo.png';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const theme = useTheme();
@@ -35,7 +36,7 @@ const NavBar = () => {
   const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => setAnchorEl(event.currentTarget);
   const handleMenuClose = () => setAnchorEl(null);
 
-  const services = ['Development', 'IT Consulting', 'Freelance Job Support', 'Trainings'];
+  const servicesAndLinks = [{ service: 'Development', link: '/services/development' }, { service: 'IT Consulting', link: '/services/consulting' }, { service: 'Freelance Job Support', link: '/services/freelacing' }, { service: 'Trainings', link: '/services/trainigs' }];
 
   return (
     <>
@@ -50,9 +51,9 @@ const NavBar = () => {
           {/* Desktop Menu */}
           {!isMobile && (
             <Box sx={{ display: 'flex', gap: 3 }}>
-              {['Home', 'About Us'].map((item) => (
-                <Button key={item} color="inherit">{item}</Button>
-              ))}
+
+              <Button color='inherit'><Link to="/">Home</Link></Button>
+              <Button color='inherit'><Link to="/aboutus">About Us</Link></Button>
 
               <Button
                 color="inherit"
@@ -66,16 +67,17 @@ const NavBar = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleMenuClose}
               >
-                {services.map((service) => (
-                  <MenuItem key={service} onClick={handleMenuClose}>
-                    {service}
+                {Object.values(servicesAndLinks).map((service) => (
+                  <MenuItem key={service.service} onClick={handleMenuClose}>
+                    <Link to={service.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                      {service.service}
+                    </Link>
                   </MenuItem>
                 ))}
               </Menu>
 
-              {['Work With Us', 'Contact Us'].map((item) => (
-                <Button key={item} color="inherit">{item}</Button>
-              ))}
+              <Button color='inherit'><Link to="/workwithus">Work With Us</Link></Button>
+              <Button color='inherit'><Link to="/contuctus">Contact Us</Link></Button>
 
               <Box sx={{ backgroundColor: 'white', py: 1, px: 2, display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
                 <Phone sx={{ mr: 1, color: 'blue' }} />
@@ -115,9 +117,9 @@ const NavBar = () => {
 
             <Collapse in={mobileSubMenuOpen} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
-                {services.map((service) => (
-                  <ListItem component={'button'} key={service} sx={{ pl: 4 }}>
-                    <ListItemText primary={service} />
+                {Object.values(servicesAndLinks).map((service) => (
+                  <ListItem component={Link} to={service.link} key={service.service} sx={{ pl: 4 }} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <ListItemText primary={service.service} />
                   </ListItem>
                 ))}
               </List>
