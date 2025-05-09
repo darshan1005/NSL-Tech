@@ -35,6 +35,7 @@ const NavBar = () => {
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => setAnchorEl(event.currentTarget);
   const handleMenuClose = () => setAnchorEl(null);
+  const handleDrawerClose = () => setDrawerOpen(false);
 
   const servicesAndLinks = [{ service: 'Development', link: '/services/development' }, { service: 'IT Consulting', link: '/services/consulting' }, { service: 'Freelance Job Support', link: '/services/freelacing' }, { service: 'Trainings', link: '/services/trainigs' }];
 
@@ -50,10 +51,10 @@ const NavBar = () => {
 
           {/* Desktop Menu */}
           {!isMobile && (
-            <Box sx={{ display: 'flex', gap: 3 }}>
+            <Box sx={{ display: 'flex', gap: 3, alignItems: 'center' }}>
 
-              <Button color='inherit'><Link to="/">Home</Link></Button>
-              <Button color='inherit'><Link to="/aboutus">About Us</Link></Button>
+              <Link to="/"><Button color='inherit'>Home</Button></Link>
+              <Link to="/aboutus"><Button color='inherit'>About Us</Button></Link>
 
               <Button
                 color="inherit"
@@ -68,16 +69,16 @@ const NavBar = () => {
                 onClose={handleMenuClose}
               >
                 {Object.values(servicesAndLinks).map((service) => (
-                  <MenuItem key={service.service} onClick={handleMenuClose}>
-                    <Link to={service.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Link to={service.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <MenuItem key={service.service} onClick={handleMenuClose}>
                       {service.service}
-                    </Link>
-                  </MenuItem>
+                    </MenuItem>
+                  </Link>
                 ))}
               </Menu>
 
-              <Button color='inherit'><Link to="/workwithus">Work With Us</Link></Button>
-              <Button color='inherit'><Link to="/contuctus">Contact Us</Link></Button>
+              <Link to="/workwithus"><Button color='inherit'>Work With Us</Button></Link>
+              <Link to="/contuctus"><Button color='inherit'>Contact Us</Button></Link>
 
               <Box sx={{ backgroundColor: 'white', py: 1, px: 2, display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
                 <Phone sx={{ mr: 1, color: 'blue' }} />
@@ -101,14 +102,21 @@ const NavBar = () => {
       </AppBar>
 
       {/* Mobile Drawer */}
-      <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-        <Box sx={{ width: 250, p: 2 }}>
+      <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerClose}>
+        <Box sx={{ width: 270, p: 2 }}>
           <List>
-            {['Home', 'About Us'].map((item) => (
-              <ListItem component={'button'} key={item}>
-                <ListItemText primary={item} />
+            <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <ListItem component={'button'} onClick={handleDrawerClose}>
+                <ListItemText primary={'Home'} />
               </ListItem>
-            ))}
+            </Link>
+            <Link to="/aboutus" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <ListItem component={'button'} onClick={handleDrawerClose}>
+
+                <ListItemText primary={'About Us'} />
+
+              </ListItem>
+            </Link>
 
             <ListItem component={'button'} onClick={() => setMobileSubMenuOpen(!mobileSubMenuOpen)}>
               <ListItemText primary="Services" />
@@ -118,18 +126,33 @@ const NavBar = () => {
             <Collapse in={mobileSubMenuOpen} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 {Object.values(servicesAndLinks).map((service) => (
-                  <ListItem component={Link} to={service.link} key={service.service} sx={{ pl: 4 }} style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <ListItemText primary={service.service} />
-                  </ListItem>
+                  <Link to={service.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <ListItem
+                      component={'button'}
+                      key={service.service}
+                      sx={{ pl: 4 }}
+                      onClick={handleDrawerClose}
+                    >
+                      <ListItemText primary={`- ${service.service}`} />
+                    </ListItem>
+                  </Link>
                 ))}
               </List>
             </Collapse>
 
-            {['Work With Us', 'Contact Us'].map((item) => (
-              <ListItem component={'button'} key={item}>
-                <ListItemText primary={item} />
+            <Link to="/workwithus" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <ListItem component={'button'} onClick={handleDrawerClose}>
+
+                <ListItemText primary={'Work With Us'} />
+
               </ListItem>
-            ))}
+            </Link>
+
+            <Link to="/contuctus" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <ListItem component={'button'} onClick={handleDrawerClose}>
+                <ListItemText primary={'Contact Us'} />
+              </ListItem>
+            </Link>
           </List>
         </Box>
       </Drawer>
