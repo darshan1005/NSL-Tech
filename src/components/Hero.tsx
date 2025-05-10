@@ -64,11 +64,11 @@ const Hero = () => {
           backgroundColor: { xs: 'none', sm: 'rgba(0, 0, 0, 0.5)' },
           padding: { xs: '10px', sm: '15px', md: '20px' },
           borderRadius: '10px',
-          width: { xs: '75%', sm: '70%', md: '50%' },
+          width: { xs: '80%', sm: '70%', md: '50%' },
         }}
       >
         <Typography
-          variant="h6"
+          variant="body2"
           mb={1}
           data-aos="fade-down"
           data-aos-delay="200"
@@ -77,7 +77,7 @@ const Hero = () => {
           {slides[currentIndex].shortDescription}
         </Typography>
         <Typography
-          variant="h4"
+          variant="h5"
           mb={1}
           data-aos="fade-down"
           data-aos-delay="400"
@@ -88,8 +88,6 @@ const Hero = () => {
         <Typography
           variant="body1"
           mb={1}
-          data-aos="fade-down"
-          data-aos-delay="400"
           key={`description-${currentIndex}`}
         >
           {slides[currentIndex].description}
