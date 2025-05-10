@@ -11,18 +11,19 @@ import Development from "./pages/servicePages/Developement";
 import Freelancing from "./pages/servicePages/Freelancing";
 import Trainings from "./pages/servicePages/Tranings";
 import WorkWithUs from "./pages/WorkWithUs";
+import Footer from "./components/Footer";
 
 const App = () => {
 
   return (
     <>
+
       <Router>
         <MediaHeader />
         <NavBar />
         <ScrollToTop />
         <Enquiry />
         <Routes>
-          {/* Home Page */}
           <Route
             path="/"
             element={
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/services/freelacing" element={<Freelancing />} />
           <Route path="/services/trainigs" element={<Trainings />} />
         </Routes>
+        <Footer />
       </Router>
 
     </>

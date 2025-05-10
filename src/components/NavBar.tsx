@@ -37,7 +37,12 @@ const NavBar = () => {
   const handleMenuClose = () => setAnchorEl(null);
   const handleDrawerClose = () => setDrawerOpen(false);
 
-  const servicesAndLinks = [{ service: 'Development', link: '/services/development' }, { service: 'IT Consulting', link: '/services/consulting' }, { service: 'Freelance Job Support', link: '/services/freelacing' }, { service: 'Trainings', link: '/services/trainigs' }];
+  const servicesAndLinks = [
+    { service: 'Development', link: '/services/development' },
+    { service: 'IT Consulting', link: '/services/consulting' },
+    { service: 'Freelance Job Support', link: '/services/freelacing' },
+    { service: 'Trainings', link: '/services/trainigs' }
+  ];
 
   return (
     <>

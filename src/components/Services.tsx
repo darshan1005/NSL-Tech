@@ -8,7 +8,6 @@ import {
   CardContent,
   useMediaQuery,
 } from '@mui/material';
-import ClientInfo from './ClientsInfo';
 
 const services = [
   {
@@ -139,7 +138,6 @@ const ServicesCarousel = () => {
           ))}
         </Box>
       </Box>
-      <ClientInfo />
     </>
   );
 };
