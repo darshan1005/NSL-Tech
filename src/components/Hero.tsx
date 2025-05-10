@@ -70,7 +70,8 @@ const Hero = () => {
         <Typography
           variant="h5"
           mb={1}
-          data-aos="fade-up"
+          data-aos="fade-down"
+          data-aos-delay="200"
           key={`shortDescription-${currentIndex}`}
           fontSize={{ xs: '1.2rem', md: '1.5rem' }}
         >
@@ -79,7 +80,7 @@ const Hero = () => {
         <Typography
           variant="h4"
           mb={1}
-          data-aos="fade-up"
+          data-aos="fade-down"
           data-aos-delay="400"
           key={`title-${currentIndex}`}
           fontSize={{ xs: '1.875rem', md: '2.5rem' }}
@@ -89,7 +90,7 @@ const Hero = () => {
         <Typography
           variant="body1"
           mb={1}
-          data-aos="fade-up"
+          data-aos="fade-down"
           data-aos-delay="400"
           key={`description-${currentIndex}`}
           fontSize={{ xs: '0.875rem', md: '1.125rem' }}
@@ -99,8 +100,6 @@ const Hero = () => {
         <Button
           variant="contained"
           color="primary"
-          data-aos="fade-up"
-          data-aos-delay="600"
           key={`button-${currentIndex}`}
           sx={{
             fontSize: { xs: '0.875rem', md: '1rem' },
