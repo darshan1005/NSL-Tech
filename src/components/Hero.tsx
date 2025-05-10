@@ -9,21 +9,21 @@ const Hero = () => {
 
   const slides = [
     {
-      title: "Slide 1 Title",
-      description: "This is the description for slide 1 which is little long.",
-      shortDescription: "This is a short description .",
+      title: "Empowering Your Digital Transformation",
+      description: "At NSL Technologies, we provide cutting-edge IT solutions to help businesses thrive in the digital era. From development to consulting, we are your trusted technology partner.",
+      shortDescription: "Transforming Businesses Digitally.",
       image: "https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg",
     },
     {
-      title: "Slide 2 Title",
-      description: "This is the description for slide 2.",
-      shortDescription: "This is a short description .",
+      title: "Innovative IT Solutions for Every Industry",
+      description: "Our team of experts delivers tailored IT services, ensuring your business stays ahead of the competition. Let us help you achieve your goals with innovative solutions.",
+      shortDescription: "Tailored IT Services for You.",
       image: "https://i.redd.it/tc0aqpv92pn21.jpg",
     },
     {
-      title: "Slide 3 Title",
-      description: "This is the description for slide 3.",
-      shortDescription: "This is a short description .",
+      title: "Your Success, Our Commitment",
+      description: "With a focus on quality and customer satisfaction, NSL Technologies is committed to driving your success through reliable and scalable IT services.",
+      shortDescription: "Committed to Your Success.",
       image: "https://wharferj.files.wordpress.com/2015/11/bio_north.jpg",
     },
   ];
@@ -64,7 +64,7 @@ const Hero = () => {
           backgroundColor: { xs: 'none', sm: 'rgba(0, 0, 0, 0.5)' },
           padding: { xs: '10px', sm: '15px', md: '20px' },
           borderRadius: '10px',
-          width: { xs: '75%', sm: '70%', md: 'max-content' },
+          width: { xs: '75%', sm: '70%', md: '50%' },
         }}
       >
         <Typography

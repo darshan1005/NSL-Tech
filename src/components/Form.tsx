@@ -32,25 +32,25 @@ const Form = ({ open = false, handleClose }: FormProps) => {
           </Typography>
           <TextField
             fullWidth
-            label="Name"
+            label="Name *"
             variant="outlined"
             margin="normal"
           />
           <TextField
             fullWidth
-            label="Email"
+            label="Email *"
             variant="outlined"
             margin="normal"
           />
           <TextField
             fullWidth
-            label="Phone Number"
+            label="Phone Number *"
             variant="outlined"
             margin="normal"
           />
           <TextField
             fullWidth
-            label="Message"
+            label="Message *"
             variant="outlined"
             margin="normal"
             multiline

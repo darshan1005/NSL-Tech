@@ -9,35 +9,16 @@ import {
   useMediaQuery,
 } from '@mui/material';
 
-const services = [
-  {
-    title: 'IT CONSULTING',
-    image: 'https://cdn.pixabay.com/photo/2015/01/08/18/25/startup-593327_960_720.jpg',
-    label: 'IT CONSULTING',
-  },
-  {
-    title: 'FREELANCE JOB SUPPORT',
-    image: 'https://cdn.pixabay.com/photo/2015/01/08/18/25/startup-593327_960_720.jpg',
-    label: 'FREELANCE JOB SUPPORT',
-  },
-  {
-    title: 'TRAININGS',
-    image: 'https://cdn.pixabay.com/photo/2015/01/08/18/25/startup-593327_960_720.jpg',
-    label: 'TRAININGS',
-  },
-  {
-    title: 'FREELANCE',
-    image: 'https://cdn.pixabay.com/photo/2015/01/08/18/25/startup-593327_960_720.jpg',
-    label: 'FREELANCE JOB SUPPORT',
-  },
-  {
-    title: 'TRAININGS PLANNER',
-    image: 'https://cdn.pixabay.com/photo/2015/01/08/18/25/startup-593327_960_720.jpg',
-    label: 'TRAININGS',
-  },
-];
+interface Service {
+  serviceHeadline: string;
+  data: {
+    title: string;
+    image: string;
+    label: string;
+  }[];
+}
 
-const ServicesCarousel = () => {
+const ServicesCarousel = ({ serviceHeadline, data }: Service) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const isMediumScreen = useMediaQuery(theme.breakpoints.between('sm', 'md'));
@@ -53,7 +34,7 @@ const ServicesCarousel = () => {
   const startAutoScroll = () => {
     stopAutoScroll();
     intervalRef.current = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
+      setActiveIndex((prevIndex) => (prevIndex + 1) % data.length);
     }, 5000);
   };
 
@@ -65,15 +46,16 @@ const ServicesCarousel = () => {
   const visibleCardCount = isSmallScreen ? 1 : isMediumScreen ? 2 : 4;
 
   // Get the visible cards based on the active index and visible card count
-  const visibleCards = services.slice(activeIndex, activeIndex + visibleCardCount).concat(
-    services.slice(0, Math.max(0, activeIndex + visibleCardCount - services.length))
+  const visibleCards = data.slice(activeIndex, activeIndex + visibleCardCount).concat(
+    data.slice(0, Math.max(0, activeIndex + visibleCardCount - data.length))
   );
 
   return (
     <>
       <Box sx={{ textAlign: 'center', py: 4, px: { xs: 2, sm: 4 } }}>
+        <Typography color='primary' fontWeight={'bold'}>NSL Tech</Typography>
         <Typography variant="h4" fontWeight="bold" gutterBottom>
-          Our Services
+          {serviceHeadline}
         </Typography>
 
         <Box
@@ -122,7 +104,7 @@ const ServicesCarousel = () => {
 
         {/* Pagination dots */}
         <Box sx={{ mt: 3, display: 'flex', justifyContent: 'center', gap: 1 }}>
-          {services.map((_, i) => (
+          {data.map((_, i) => (
             <Box
               key={i}
               onClick={() => setActiveIndex(i)}
