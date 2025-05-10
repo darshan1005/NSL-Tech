@@ -43,7 +43,7 @@ const CardHOC = ({
             boxShadow="0 4px 10px rgba(0, 0, 0, 0.1)"
           >
             <Box component="img" src={cardSrc} sx={{ width: '100%', borderRadius: 2 }} />
-            <Typography variant="h4" fontWeight="bold">
+            <Typography variant="h5" fontWeight="bold">
               {cardHeader}
             </Typography>
             <Component {...props} />
@@ -58,7 +58,7 @@ const CardHOC = ({
           >
             {/* Related Services */}
             <Box>
-              <Typography variant="h5" fontWeight="bold" mb={1}>
+              <Typography variant="h6" fontWeight="bold" mb={1}>
                 Related Services
               </Typography>
               <Divider />

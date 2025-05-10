@@ -32,7 +32,7 @@ const ContactUs = () => {
           <Typography variant="h4" fontWeight="bold">
             Contact Details
           </Typography>
-          <Typography>
+          <Typography variant="body1">
             Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days. We will be happy to answer your questions.
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>

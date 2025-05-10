@@ -17,13 +17,13 @@ const About = () => {
       >
         <Box flex={1}>
           <Stack spacing={2}>
-            <Typography variant="h5" fontWeight="bold" color="primary">
+            <Typography variant="h6" fontWeight="bold" color="primary">
               About Company
             </Typography>
             <Typography variant="h4" fontWeight="bold">
               NSL Technologies
             </Typography>
-            <Typography component="p" color="textSecondary" lineHeight={1.8}>
+            <Typography variant="body1" color="textSecondary" lineHeight={1.8}>
               At NSL Technologies, we believe that persistent enhancement and a nimble approach to technology make online businesses sustainable and able to compete. Unleash the complete potential of your web presence and watch your business grow online with our 360-degree development service including web, mobile app services. Our team of developers and engineers place us at the center of your business so that we know exactly what solutions you need in order to deliver a high-quality product for your target audience. The immense experience of our IT specialist teams is what sets us apart as the best IT service provider in the Market.
             </Typography>
             <Box display="flex" gap={1}>
@@ -34,7 +34,7 @@ const About = () => {
                   alt="Experience demo image"
                   sx={{ height: 80, objectFit: 'contain' }}
                 />
-                <Typography variant="h5" fontWeight="bold" marginTop={1}>
+                <Typography variant="h6" fontWeight="bold" marginTop={1}>
                   Experience
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
@@ -48,7 +48,7 @@ const About = () => {
                   alt="Quick Support demo image"
                   sx={{ height: 80, objectFit: 'contain' }}
                 />
-                <Typography variant="h5" fontWeight="bold" marginTop={1}>
+                <Typography variant="h6" fontWeight="bold" marginTop={1}>
                   Quick Support
                 </Typography>
                 <Typography variant="body2" color="textSecondary">

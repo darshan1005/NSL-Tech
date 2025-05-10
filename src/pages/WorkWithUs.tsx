@@ -1,4 +1,4 @@
-import { Box, TextField, Button, MenuItem } from "@mui/material";
+import { Box, TextField, Button, MenuItem, Typography } from "@mui/material";
 import withUs from '../assets/work_with.png'
 
 const WorkWithUs = () => {
@@ -28,6 +28,9 @@ const WorkWithUs = () => {
             boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
           }}
         >
+          <Typography variant="h5" fontWeight="bold">
+            Work With Us
+          </Typography>
           <Box sx={{ display: "flex", gap: 2 }}>
             <TextField
               placeholder="Name *"

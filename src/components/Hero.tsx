@@ -68,12 +68,11 @@ const Hero = () => {
         }}
       >
         <Typography
-          variant="h5"
+          variant="h6"
           mb={1}
           data-aos="fade-down"
           data-aos-delay="200"
           key={`shortDescription-${currentIndex}`}
-          fontSize={{ xs: '1.2rem', md: '1.5rem' }}
         >
           {slides[currentIndex].shortDescription}
         </Typography>
@@ -83,7 +82,6 @@ const Hero = () => {
           data-aos="fade-down"
           data-aos-delay="400"
           key={`title-${currentIndex}`}
-          fontSize={{ xs: '1.875rem', md: '2.5rem' }}
         >
           {slides[currentIndex].title}
         </Typography>
@@ -93,7 +91,6 @@ const Hero = () => {
           data-aos="fade-down"
           data-aos-delay="400"
           key={`description-${currentIndex}`}
-          fontSize={{ xs: '0.875rem', md: '1.125rem' }}
         >
           {slides[currentIndex].description}
         </Typography>

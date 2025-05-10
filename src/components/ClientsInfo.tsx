@@ -5,7 +5,7 @@ const ClientInfo = () => {
   const theme = useTheme();
   return (
     <Box>
-      <Typography variant="h4" fontWeight="bold" gutterBottom textAlign={'center'} mt={4}>
+      <Typography variant="h4" fontWeight="bold" gutterBottom textAlign="center" mt={4}>
         Our trusted partners
       </Typography>
       <Box
@@ -88,4 +88,4 @@ const ClientInfo = () => {
   )
 }
 
-export default ClientInfo; 
+export default ClientInfo;

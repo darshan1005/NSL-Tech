@@ -18,28 +18,28 @@ const Banner = () => {
         gap={2}
       >
         <Box textAlign="left">
-          <Typography variant="h4" fontWeight="bold">
+          <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" } }}>
             +125
           </Typography>
-          <Typography variant="body1">Active Clients</Typography>
+          <Typography variant="body1" sx={{ fontSize: { xs: "0.75rem", sm: "1rem", md: "1.25rem" } }}>Active Clients</Typography>
         </Box>
         <Box textAlign="left">
-          <Typography variant="h4" fontWeight="bold">
+          <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" } }}>
             +200
           </Typography>
-          <Typography variant="body1">Projects Done</Typography>
+          <Typography variant="body1" sx={{ fontSize: { xs: "0.75rem", sm: "1rem", md: "1.25rem" } }}>Projects Done</Typography>
         </Box>
         <Box textAlign="left">
-          <Typography variant="h4" fontWeight="bold">
+          <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" } }}>
             +2000
           </Typography>
-          <Typography variant="body1">Team Advisors</Typography>
+          <Typography variant="body1" sx={{ fontSize: { xs: "0.75rem", sm: "1rem", md: "1.25rem" } }}>Team Advisors</Typography>
         </Box>
         <Box textAlign="left">
-          <Typography variant="h4" fontWeight="bold">
+          <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" } }}>
             +06
           </Typography>
-          <Typography variant="body1">Glorious Years</Typography>
+          <Typography variant="body1" sx={{ fontSize: { xs: "0.75rem", sm: "1rem", md: "1.25rem" } }}>Glorious Years</Typography>
         </Box>
       </Stack>
     </Box>
