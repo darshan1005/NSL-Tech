@@ -29,7 +29,7 @@ const CardHOC = ({
           justifyContent="space-around"
           alignItems="flex-start"
           gap={4}
-          padding={4}
+          padding={{ xs: 2, sm: 4 }}
         >
           {/* Card Content */}
           <Box
