@@ -50,7 +50,7 @@ const Hero = () => {
         alt={slides[currentIndex].title}
         sx={{
           width: '100%',
-          height: { xs: 460, md: 590 },
+          height: { xs: 490, md: 590 },
           objectFit: 'cover',
         }}
       />
