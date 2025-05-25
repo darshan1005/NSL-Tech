@@ -17,7 +17,7 @@ const About = () => {
       >
         <Box flex={1}>
           <Stack spacing={2}>
-            <Typography variant="h6" fontWeight="bold" color="primary">
+            <Typography variant="h6" fontWeight="bold" color="primary" textAlign="center">
               About Company
             </Typography>
             <Typography variant="h4" fontWeight="bold">
